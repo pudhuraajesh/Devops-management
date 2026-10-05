@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Response Submitted</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<section class="success">
+
+    <div class="success-box">
+
+        <div class="check">
+            ✓
+        </div>
+
+        <h1>
+            Response
+            <span>Submitted</span>
+        </h1>
+
+        <p>
+            Your response has been successfully
+            stored in the application database.
+        </p>
+
+        <a href="/">
+            ← Back to Dashboard
+        </a>
+
+        <a href="/responses">
+            View Responses
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

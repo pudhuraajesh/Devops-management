@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Microservices</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        DEV<span>OPS</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Dashboard</a>
+        <a href="/pipeline">Pipeline</a>
+        <a href="/services">Microservices</a>
+
+    </div>
+
+</nav>
+
+
+<section class="page">
+
+    <div class="heading">
+
+        <small>APPLICATION MIGRATION</small>
+
+        <h1>
+            Microservices
+            <span>Architecture</span>
+        </h1>
+
+        <p>
+            Demonstration of splitting a monolithic
+            application into independent services.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+        <div class="big-service">
+
+            <div class="service-tag">
+                SERVICE 01
+            </div>
+
+            <h2>User Service</h2>
+
+            <p>
+                Handles user registration,
+                authentication and profile data.
+            </p>
+
+            <div class="endpoint">
+                /users
+            </div>
+
+        </div>
+
+
+        <div class="big-service">
+
+            <div class="service-tag">
+                SERVICE 02
+            </div>
+
+            <h2>Product Service</h2>
+
+            <p>
+                Manages product information,
+                categories and inventory.
+            </p>
+
+            <div class="endpoint">
+                /products
+            </div>
+
+        </div>
+
+
+        <div class="big-service">
+
+            <div class="service-tag">
+                SERVICE 03
+            </div>
+
+            <h2>Order Service</h2>
+
+            <p>
+                Processes customer orders,
+                payments and order status.
+            </p>
+
+            <div class="endpoint">
+                /orders
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="architecture-note">
+
+        <h2>Why Microservices?</h2>
+
+        <ul>
+
+            <li>Independent deployment</li>
+
+            <li>Better scalability</li>
+
+            <li>Fault isolation</li>
+
+            <li>Independent development teams</li>
+
+            <li>Easier maintenance</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="back">
+
+        <a href="/">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

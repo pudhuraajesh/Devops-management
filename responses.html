@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Stored Responses</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        DEV<span>OPS</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Dashboard</a>
+
+        <a href="/pipeline">Pipeline</a>
+
+        <a href="/services">Microservices</a>
+
+    </div>
+
+</nav>
+
+
+<section class="page">
+
+    <div class="heading">
+
+        <small>DATABASE</small>
+
+        <h1>
+            Stored
+            <span>Responses</span>
+        </h1>
+
+    </div>
+
+
+    {% if responses %}
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Response</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for response in responses %}
+
+                <tr>
+
+                    <td>
+                        {{ loop.index }}
+                    </td>
+
+                    <td>
+                        {{ response[1] }}
+                    </td>
+
+                    <td>
+                        {{ response[2] }}
+                    </td>
+
+                    <td>
+                        {{ response[3] }}
+                    </td>
+
+                    <td>
+
+                        <form
+                            action="{{ url_for('delete_response', response_id=response[0]) }}"
+                            method="POST"
+                        >
+
+                            <button class="delete">
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+
+        No responses available.
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="back">
+
+        <a href="/">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

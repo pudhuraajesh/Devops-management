@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CI/CD Pipeline</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        DEV<span>OPS</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Dashboard</a>
+        <a href="/pipeline">Pipeline</a>
+        <a href="/services">Microservices</a>
+
+    </div>
+
+</nav>
+
+
+<section class="page">
+
+    <div class="heading">
+
+        <small>CONTINUOUS INTEGRATION</small>
+
+        <h1>
+            CI/CD
+            <span>Pipeline</span>
+        </h1>
+
+        <p>
+            Automated workflow from source code
+            to cloud deployment.
+        </p>
+
+    </div>
+
+
+    <div class="pipeline-large">
+
+        <div class="stage active">
+
+            <div class="stage-number">01</div>
+
+            <h2>Git</h2>
+
+            <p>
+                Source code is maintained using
+                Git version control.
+            </p>
+
+            <span>VERSION CONTROL</span>
+
+        </div>
+
+
+        <div class="stage">
+
+            <div class="stage-number">02</div>
+
+            <h2>GitHub</h2>
+
+            <p>
+                Developers create branches and
+                submit Pull Requests.
+            </p>
+
+            <span>CODE REVIEW</span>
+
+        </div>
+
+
+        <div class="stage">
+
+            <div class="stage-number">03</div>
+
+            <h2>GitHub Actions</h2>
+
+            <p>
+                Automated tests execute whenever
+                code is pushed.
+            </p>
+
+            <span>CONTINUOUS INTEGRATION</span>
+
+        </div>
+
+
+        <div class="stage">
+
+            <div class="stage-number">04</div>
+
+            <h2>Vercel</h2>
+
+            <p>
+                Validated code is deployed
+                to the cloud.
+            </p>
+
+            <span>CONTINUOUS DEPLOYMENT</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="back">
+
+        <a href="/">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

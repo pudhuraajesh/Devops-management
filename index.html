@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevFlow | DevOps Deployment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <span>Dev</span>Flow
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/pipeline">Pipeline</a>
+        <a href="/services">Microservices</a>
+        <a href="/about">About</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="small-label">
+            DEVOPS PROJECT
+        </div>
+
+        <h1>
+            Build.
+            <span>Test.</span>
+            Deploy.
+        </h1>
+
+        <p>
+            A simple demonstration of modern DevOps practices using
+            Git, GitHub, CI/CD, automated testing and cloud deployment.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/pipeline" class="btn primary">
+                View Pipeline
+            </a>
+
+            <a href="/services" class="btn secondary">
+                Explore Services
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="terminal">
+
+        <div class="terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="terminal-content">
+
+            <p><b>$</b> git checkout feature</p>
+
+            <p><b>$</b> git push origin feature</p>
+
+            <p class="green">
+                ✓ Pull request created
+            </p>
+
+            <p><b>$</b> pytest</p>
+
+            <p class="green">
+                ✓ 3 tests passed
+            </p>
+
+            <p><b>$</b> deploy production</p>
+
+            <p class="blue">
+                → Deployment successful
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div class="stat-card">
+        <h2>01</h2>
+        <p>Version Control</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>02</h2>
+        <p>CI / CD</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>03</h2>
+        <p>Cloud Deployment</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>04</h2>
+        <p>Microservices</p>
+    </div>
+
+</section>
+
+
+<!-- DEVOPS PROCESS -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <span>THE PROCESS</span>
+
+        <h2>
+            From Code to Production
+        </h2>
+
+        <p>
+            The application follows a simple automated deployment workflow.
+        </p>
+
+    </div>
+
+
+    <div class="process">
+
+        <div class="process-card">
+
+            <div class="number">01</div>
+
+            <h3>Git</h3>
+
+            <p>
+                Developers create branches and manage application
+                versions using Git.
+            </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="process-card">
+
+            <div class="number">02</div>
+
+            <h3>GitHub</h3>
+
+            <p>
+                Changes are pushed to GitHub and reviewed through
+                pull requests.
+            </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="process-card">
+
+            <div class="number">03</div>
+
+            <h3>GitHub Actions</h3>
+
+            <p>
+                Automated tests run whenever code is pushed or a
+                pull request is created.
+            </p>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <div class="process-card">
+
+            <div class="number">04</div>
+
+            <h3>Vercel</h3>
+
+            <p>
+                The tested application can be deployed to a
+                cloud environment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+<section class="architecture">
+
+    <div class="architecture-text">
+
+        <span>ARCHITECTURE</span>
+
+        <h2>
+            Monolith → Microservices
+        </h2>
+
+        <p>
+            A traditional monolithic application keeps multiple
+            features inside one application. DevOps encourages
+            breaking these features into smaller independent services.
+        </p>
+
+        <a href="/services" class="text-link">
+            View microservices →
+        </a>
+
+    </div>
+
+
+    <div class="architecture-box">
+
+        <div class="mono-box">
+            <strong>MONOLITH</strong>
+            <small>Single Application</small>
+
+            <div class="mini-items">
+                <span>User</span>
+                <span>Product</span>
+                <span>Order</span>
+            </div>
+        </div>
+
+
+        <div class="big-arrow">
+            →
+        </div>
+
+
+        <div class="micro-grid">
+
+            <div>
+                <b>User</b>
+                <small>Service</small>
+            </div>
+
+            <div>
+                <b>Product</b>
+                <small>Service</small>
+            </div>
+
+            <div>
+                <b>Order</b>
+                <small>Service</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEEDBACK -->
+<section class="feedback">
+
+    <div class="feedback-title">
+
+        <span>CONTACT</span>
+
+        <h2>
+            Send Your Feedback
+        </h2>
+
+        <p>
+            Submit a response to test the application's
+            form and database functionality.
+        </p>
+
+    </div>
+
+
+    <form action="/submit" method="POST">
+
+        <div class="form-row">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+        </div>
+
+
+        <textarea
+            name="message"
+            placeholder="Write your message..."
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Submit Response →
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div>
+        <strong>DevFlow</strong>
+        <p>DevOps Deployment Demonstration</p>
+    </div>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/pipeline">Pipeline</a>
+        <a href="/services">Services</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 DevFlow. Academic Project.
+    </p>
+
+</footer>
+
+</body>
+</html>
